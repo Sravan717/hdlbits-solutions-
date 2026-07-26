@@ -17,3 +17,8 @@ tracks my progress through HDL Bits' problem sets.
 - Verilog syntax and module design
 
 ## Structure
+
+- `combinational/` — combinational logic problems
+- `sequential/` — sequential logic problems
+- `fsm/` — finite state machine problems
+
