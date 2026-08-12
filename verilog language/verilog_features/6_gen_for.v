@@ -9,9 +9,9 @@ module top_module(
     
     wire [100:0] c;
     assign c[0] = cin;
-    
+     genvar i;
     generate
-        genvar i;
+       
         for(i=0;i<100;i++) begin: loop
             add inst(a[i],b[i],c[i],sum[i],c[i+1]);
             
