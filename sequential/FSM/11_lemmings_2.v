@@ -20,14 +20,14 @@ module top_module(
     end
     always @(*) begin
         case(state)
-            L: next_state = ground?bump_left?R:L:f_l;
+            L: next_state = ground?(bump_left?R:L):f_l;
             f_l:next_state = ground?L:f_l;
-            R: next_state = ground?bump_right?L:R:f_r;
+            R: next_state = ground?(bump_right?L:R):f_r;
             f_r: next_state = ground?R:f_r;
             default:next_state = state;
         endcase
     end
     assign walk_left = (state ==L);
     assign walk_right = (state ==R);
-    assign aaah = (state ==f_l | (state ==f_r));
+    assign aaah = (state ==f_l || (state ==f_r));
 endmodule
